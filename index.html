@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <!-- Import Trumbowyg CSS -->
+    <link rel="stylesheet" href="trumbowyg/dist/ui/trumbowyg.min.css">
+    <link rel="stylesheet" href="trumbowyg/dist/plugins/colors/ui/trumbowyg.colors.min.css">
+    <!-- Import my stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Import jQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+    <!-- Import Trumbowyg -->
+    <script src="trumbowyg/dist/trumbowyg.min.js" integrity="sha512-mBsoM2hTemSjQ1ETLDLBYvw6WP9QV8giiD33UeL2Fzk/baq/AibWjI75B36emDB6Td6AAHlysP4S/XbMdN+kSA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Import Trumbowyg plugins... -->
+    <script src="trumbowyg/dist/plugins/base64/trumbowyg.base64.min.js"></script>
+    <script src="trumbowyg/dist/plugins/fontfamily/trumbowyg.fontfamily.min.js"></script>
+    <script src="trumbowyg/dist/plugins/fontsize/trumbowyg.fontsize.min.js"></script>
+    <script src="trumbowyg/dist/plugins/indent/trumbowyg.indent.min.js"></script>
+    <script src="trumbowyg/dist/plugins/colors/trumbowyg.colors.min.js"></script>
+    <script src="trumbowyg/dist/plugins/history/trumbowyg.history.min.js"></script>
+    <script src="trumbowyg/dist/plugins/pasteimage/trumbowyg.pasteimage.min.js"></script>
+    
+    <div id="editor-container">
+        <textarea id="kb-editor" placeholder="Live the first value of Vail Resorts of Serving Others. Write an epic article here!">
+        </textarea>
+
+        <script>
+            $('#kb-editor').trumbowyg({
+                btns: [
+                    ['fontfamily'],
+                    ['fontsize'],
+                    ['historyUndo', 'historyRedo'],
+                    ['indent', 'outdent'],
+                    ['bold', 'italic', 'underline', 'del'],
+                    ['foreColor', 'backColor'],
+                    ['superscript', 'subscript'],
+                    ['link', 'unlink'],
+                    ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+                    ['unorderedList', 'orderedList'],
+                    ['insertImage', 'base64'],
+                    ['removeformat'],
+                    ['viewHTML']
+                ],
+                semantic: false,
+                resetCss: true,
+                autogrow: true,
+                imageWidthModalEdit: true,
+                urlProtocol: true,
+                minimalLinks: true,
+                defaultLinkTarget: '_blank',
+                changeActiveDropdownIcon: true,
+                tabToIndent: true,
+                plugins: {
+                    fontsize: {
+                        sizeList: [
+                            '12px',
+                            '14px',
+                            '16px',
+                            '18px',
+                            '20px'
+                        ]
+                    },
+                    colors: {
+                        foreColorList: ['FFFFFF', 'C0C0C0', '808080', '000000', 'FF0000', '800000', 'FFFF00', '808000', '00FF00', '008000', '00FFFF', '008080', '0000FF', '000080', 'FF00FF', '800080'],
+                        backColorList: [
+                            'ff0', '0f0', '0ff', 'f0f', '00f',
+                            'f00', '000080', '008080', '008000', '800080',
+                            '800000', '808000', '808080', 'c0c0c0','000'
+                        ]
+                    }
+                }
+            });
+
+        </script>
+    </div>
+</body>
+</html>

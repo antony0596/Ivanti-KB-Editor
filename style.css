@@ -1,0 +1,29 @@
+#editor-container {
+    margin: auto;
+    width: 70%;
+}
+#kb-editor {
+    border: 1px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.trumbowyg-editor.trumbowyg-reset-css ul {
+    list-style: disc;
+}
+.trumbowyg-editor.trumbowyg-reset-css ul ul{
+    list-style: circle;
+}
+.trumbowyg-editor.trumbowyg-reset-css ul ul ul{
+    list-style: square;
+}
+
+.trumbowyg-editor.trumbowyg-reset-css ol {
+    list-style: decimal;
+}
+.trumbowyg-editor.trumbowyg-reset-css ol ol{
+    list-style: lower-alpha;
+}
+.trumbowyg-editor.trumbowyg-reset-css ol ol ol{
+    list-style: lower-roman;
+}
